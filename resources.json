@@ -10,6 +10,36 @@
     "keywords": ["support", "counseling", "family", "resources", "help"]
   },
   {
+    "name": "Military OneSource — Food Assistance for Military Families",
+    "category": "Food & essential needs",
+    "description": "Official guidance on food assistance pathways, including SNAP, WIC, school meals, food banks, and military community support.",
+    "first_step": "Review the listed programs and confirm eligibility and local availability with the official provider.",
+    "url": "https://www.militaryonesource.mil/resources/millife-guides/food-security-resources-and-support-programs/",
+    "source_owner": "Military OneSource",
+    "last_checked": "2026-10-21",
+    "keywords": ["food", "food bank", "groceries", "SNAP", "WIC", "school meals", "hunger", "nutrition", "essentials"]
+  },
+  {
+    "name": "Military OneSource — Financial Counseling",
+    "category": "Financial support",
+    "description": "Free financial counseling for eligible service members and family members, including help with budgeting, debt questions, and referrals.",
+    "first_step": "Review eligibility and contact Military OneSource to ask about available counseling options.",
+    "url": "https://www.militaryonesource.mil/benefits/financial-counseling/",
+    "source_owner": "Military OneSource",
+    "last_checked": "2026-10-21",
+    "keywords": ["money", "financial", "debt", "budget", "bills", "foreclosure", "counseling", "financial stress"]
+  },
+  {
+    "name": "Military OneSource — Military & Family Life Counseling",
+    "category": "Family readiness",
+    "description": "Information about confidential, short-term counseling and support for service members and eligible family members navigating stress, parenting, grief, and transitions.",
+    "first_step": "Review the program details and use the official locator or contact options to confirm local availability.",
+    "url": "https://www.militaryonesource.mil/programs/military-family-life-counseling/",
+    "source_owner": "Military OneSource",
+    "last_checked": "2026-10-21",
+    "keywords": ["stress", "parenting", "grief", "family", "counseling", "mental health", "relationships", "deployment"]
+  },
+  {
     "name": "Military OneSource — Deployment Support",
     "category": "Family readiness",
     "description": "Information to help service members and families prepare for and manage deployment-related transitions.",
