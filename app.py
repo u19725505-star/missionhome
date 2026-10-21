@@ -85,8 +85,11 @@ with right:
         ]
     st.caption(f"{len(filtered)} resource(s) match your selection.")
     if not filtered:
-        st.warning("No exact matches. Try a broader search or choose All areas.")
-    for r in filtered:
+        st.warning("No exact matches for those filters. To keep the directory useful, all official resources are shown below.")
+        display_resources = resources
+    else:
+        display_resources = filtered
+    for r in display_resources:
         with st.container(border=True):
             st.markdown(f"### {r['name']}")
             st.caption(r["category"])
