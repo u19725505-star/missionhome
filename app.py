@@ -30,11 +30,30 @@ st.markdown("""
 
 st.info("MissionHome is a navigation aid, not an eligibility decision-maker. Confirm current services, availability, and requirements directly with each provider. This early version links to official sources and does not send your answers to an AI service.")
 
+# Stable widget keys let people clear filters without refreshing the whole page.
+if "category_filter" not in st.session_state:
+    st.session_state["category_filter"] = "All areas"
+if "search_filter" not in st.session_state:
+    st.session_state["search_filter"] = ""
+
 left, right = st.columns([1, 2])
 with left:
     st.subheader("What would help today?")
-    category = st.selectbox("Choose a support area", ["All areas"] + sorted({r["category"] for r in resources}))
-    search = st.text_input("Search resources", placeholder="e.g. relocation, spouse jobs")
+    if st.button("Clear filters", use_container_width=True):
+        st.session_state["category_filter"] = "All areas"
+        st.session_state["search_filter"] = ""
+        st.rerun()
+    category = st.selectbox(
+        "Choose a support area",
+        ["All areas"] + sorted({r["category"] for r in resources}),
+        key="category_filter",
+    )
+    search = st.text_input(
+        "Search resources",
+        placeholder="e.g. relocation, spouse jobs",
+        key="search_filter",
+        help="You can enter one or more words. Matching is case-insensitive.",
+    )
     urgency = st.radio("How urgent is this?", ["Planning ahead", "Need help soon", "Immediate danger"], index=0)
     if urgency == "Immediate danger":
         st.error("If someone is in immediate danger in the United States, call 911. For a mental health crisis, call or text 988. If this is not an emergency, continue below.")
@@ -45,9 +64,25 @@ with right:
     filtered = resources
     if category != "All areas":
         filtered = [r for r in filtered if r["category"] == category]
-    terms = search.strip().lower()
+    terms = search.casefold().split()
     if terms:
-        filtered = [r for r in filtered if terms in (r["name"] + " " + r["category"] + " " + r["description"] + " " + " ".join(r.get("keywords", []))).lower()]
+        def searchable_text(resource):
+            fields = [
+                resource.get("name", ""),
+                resource.get("category", ""),
+                resource.get("description", ""),
+                resource.get("first_step", ""),
+                resource.get("source_owner", ""),
+                " ".join(resource.get("keywords", [])),
+            ]
+            return " ".join(fields).casefold()
+
+        # Every search word must appear somewhere in the resource text.
+        # This makes multi-word searches less brittle than exact-phrase matching.
+        filtered = [
+            r for r in filtered
+            if all(term in searchable_text(r) for term in terms)
+        ]
     st.caption(f"{len(filtered)} resource(s) match your selection.")
     if not filtered:
         st.warning("No exact matches. Try a broader search or choose All areas.")
