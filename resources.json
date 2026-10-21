@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Military OneSource — Resource Finder",
+    "category": "Essential needs",
+    "description": "A Department of Defense support hub with information and resources for service members and eligible families.",
+    "first_step": "Browse the resource finder and confirm whether a service fits your situation.",
+    "url": "https://www.militaryonesource.mil/resources/resources-finder/",
+    "source_owner": "Military OneSource",
+    "last_checked": "2026-10-21",
+    "keywords": ["support", "counseling", "family", "resources", "help"]
+  },
+  {
+    "name": "Military OneSource — Deployment Support",
+    "category": "Family readiness",
+    "description": "Information to help service members and families prepare for and manage deployment-related transitions.",
+    "first_step": "Review the available deployment support guidance and use the official contact options if you need help.",
+    "url": "https://www.militaryonesource.mil/deployment/on-deployment/military-deployment-support/",
+    "source_owner": "Military OneSource",
+    "last_checked": "2026-10-21",
+    "keywords": ["deployment", "reintegration", "readiness", "parenting", "family"]
+  },
+  {
+    "name": "Military OneSource — Installation Directory",
+    "category": "Housing & relocation",
+    "description": "Official installation information that can help families begin researching services and local contacts at a duty location.",
+    "first_step": "Search for the installation and verify details with the listed official office.",
+    "url": "https://installations.militaryonesource.mil/",
+    "source_owner": "Military OneSource",
+    "last_checked": "2026-10-21",
+    "keywords": ["PCS", "moving", "relocation", "housing", "installation", "base"]
+  },
+  {
+    "name": "U.S. Department of Veterans Affairs",
+    "category": "Essential needs",
+    "description": "Official VA portal for veterans, eligible family members, benefits information, and support services.",
+    "first_step": "Choose the relevant topic and confirm eligibility and application steps on VA.gov.",
+    "url": "https://www.va.gov/",
+    "source_owner": "U.S. Department of Veterans Affairs",
+    "last_checked": "2026-10-21",
+    "keywords": ["veteran", "benefits", "health", "family", "housing"]
+  },
+  {
+    "name": "USAJOBS — Federal Employment",
+    "category": "Spouse careers & education",
+    "description": "The official U.S. federal government jobs website. Search roles and read each vacancy announcement for requirements.",
+    "first_step": "Search for roles that match your skills and review the announcement before applying.",
+    "url": "https://www.usajobs.gov/",
+    "source_owner": "U.S. Office of Personnel Management",
+    "last_checked": "2026-10-21",
+    "keywords": ["spouse", "career", "employment", "job", "federal", "work"]
+  },
+  {
+    "name": "Military Spouse Employment Partnership",
+    "category": "Spouse careers & education",
+    "description": "A Department of Defense initiative connecting military spouses with employers and career opportunities.",
+    "first_step": "Explore employer and career resources and confirm current opportunities directly.",
+    "url": "https://myseco.militaryonesource.mil/portal/",
+    "source_owner": "Military OneSource / Department of Defense",
+    "last_checked": "2026-10-21",
+    "keywords": ["spouse", "employment", "career", "education", "SECO"]
+  }
+]
