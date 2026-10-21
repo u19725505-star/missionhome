@@ -2,15 +2,21 @@
 
 **Practical support for the people who serve alongside those who serve.**
 
-MissionHome is an early-stage, responsible support navigator designed to help military families find official starting points for housing and relocation, essential needs, family readiness, and spouse careers.
+MissionHome is an early-stage, responsible support navigator designed to help military families find official starting points for housing and relocation, food and essential needs, financial support, family readiness, and spouse careers.
 
 ## Current prototype
 
-- Search and filter a small directory of official resources.
+- Search and filter a directory of official starting points.
 - Show a concrete first step for each resource.
+- Cover food assistance, financial counseling, family readiness, relocation, veteran services, and spouse employment.
 - Provide a simple checklist for planning next steps.
 - Clearly communicate that eligibility and availability must be confirmed with the provider.
 - Keep the core experience deterministic: no AI API calls, no user accounts, and no personal data submission.
+
+## Public demo
+
+- Live app: https://missionhome.onrender.com
+- Reviewer walkthrough and smoke tests: [docs/HACKATHON_DEMO.md](docs/HACKATHON_DEMO.md)
 
 ## Run locally
 
@@ -21,7 +27,7 @@ python -m venv .venv
 # macOS/Linux:
 source .venv/bin/activate
 # Windows PowerShell:
-# .venv\Scripts\Activate.ps1
+# .venv\\Scripts\\Activate.ps1
 pip install -r requirements.txt
 streamlit run app.py
 ```
@@ -33,9 +39,14 @@ pip install pytest
 pytest -q
 ```
 
+Tests check required resource fields, HTTPS URL structure, unique names, usable categories and keywords, ISO-formatted review dates, and coverage of core support areas. These checks do not guarantee that external sites are available or that any individual is eligible for assistance.
+
 ## Initial official sources
 
 - [Military OneSource Resource Finder](https://www.militaryonesource.mil/resources/resources-finder/)
+- [Military OneSource Food Assistance for Military Families](https://www.militaryonesource.mil/resources/millife-guides/food-security-resources-and-support-programs/)
+- [Military OneSource Financial Counseling](https://www.militaryonesource.mil/benefits/financial-counseling/)
+- [Military & Family Life Counseling](https://www.militaryonesource.mil/programs/military-family-life-counseling/)
 - [Military OneSource Deployment Support](https://www.militaryonesource.mil/deployment/on-deployment/military-deployment-support/)
 - [Military OneSource Installation Directory](https://installations.militaryonesource.mil/)
 - [U.S. Department of Veterans Affairs](https://www.va.gov/)
@@ -46,7 +57,7 @@ Resource links are starting points, not guarantees of eligibility, availability,
 
 ## Privacy and safety
 
-Do not enter or store Social Security numbers, bank details, medical records, classified information, deployment schedules, or unit locations. MissionHome is not an emergency service, legal adviser, financial adviser, or eligibility determination system. In an immediate emergency in the United States, call 911.
+Do not enter or store Social Security numbers, bank details, medical records, classified information, deployment schedules, or unit locations. MissionHome is not an emergency service, legal adviser, financial adviser, or eligibility determination system. In an immediate emergency in the United States, call 911. For a mental health crisis in the United States, call or text 988.
 
 ## Cost and AI status
 
